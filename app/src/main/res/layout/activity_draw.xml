@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_title" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="13dp"
+        android:background="@drawable/base_press"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/album_dp_10"
+            android:gravity="center"
+            android:text="提现网络"
+            android:textColor="#304052"
+            android:textSize="@dimen/ctv_sizen_14" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_erc"
+                android:layout_width="100dp"
+                android:layout_height="@dimen/album_dp_30"
+                android:background="@drawable/erc_shape"
+                android:gravity="center"
+                android:layout_marginRight="10dp"
+                android:text="USDT-ERC20"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/ctv_sizen_13"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_trc"
+                android:layout_width="100dp"
+                android:layout_height="@dimen/album_dp_30"
+                android:background="@drawable/trc_shape"
+                android:gravity="center"
+                android:text="USDT-TRC20"
+                android:textColor="@color/black33"
+                android:textSize="@dimen/ctv_sizen_13"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/dive_line" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/album_dp_50">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:text="提现类型"
+                android:textColor="#161616"
+                android:textSize="@dimen/ctv_sizen_15" />
+
+            <TextView
+                android:id="@+id/text_dig"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:drawableRight="@mipmap/icon_right_arrow"
+                android:drawablePadding="5dp"
+                android:gravity="center|left"
+                android:text="USDT"
+                android:textColor="#161616"
+                android:textSize="@dimen/ctv_sizen_15" />
+
+
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/dive_line" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:gravity="center"
+            android:text="提币地址"
+            android:textColor="#304052"
+            android:textSize="@dimen/ctv_sizen_14" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/text_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="@color/colorWhite"
+                android:gravity="center|left"
+                android:hint="输入或长按复制粘贴"
+                android:minHeight="40dp"
+                android:paddingRight="20dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/ctv_sizen_14" />
+
+
+            <ImageView
+                android:id="@+id/iv_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:src="@mipmap/icon_sacn" />
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/dive_line" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:gravity="center"
+            android:text="数量"
+            android:textColor="#304052"
+            android:textSize="@dimen/ctv_sizen_14" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="14dp">
+
+
+            <EditText
+                android:id="@+id/et_num"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorWhite"
+                android:gravity="center|left"
+                android:hint="最小提币数2"
+                android:inputType="numberDecimal"
+                android:maxLength="10"
+                android:maxLines="1"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/ctv_sizen_14" />
+
+
+            <TextView
+                android:id="@+id/text_num_box"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:text="BOX"
+                android:textColor="#161616"
+                android:textSize="@dimen/ctv_sizen_14" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/dive_line" />
+
+        <TextView
+            android:id="@+id/text_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="可用125.1230 BOX"
+            android:textColor="#959595"
+            android:textSize="@dimen/ctv_sizen_13" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="手续费"
+            android:textColor="#304052"
+            android:textSize="@dimen/ctv_sizen_14" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="14dp">
+
+
+            <TextView
+                android:id="@+id/text_service"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorWhite"
+                android:gravity="center|left"
+                android:maxLines="1"
+                android:text="0"
+                android:textColor="#959595"
+                android:textSize="@dimen/ctv_sizen_14" />
+
+
+            <TextView
+                android:id="@+id/text_service_box"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:text="ETH"
+                android:textColor="#161616"
+                android:textSize="@dimen/ctv_sizen_14" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/dive_line" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="支付密码"
+            android:textColor="#304052"
+            android:textSize="@dimen/ctv_sizen_14" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@color/colorWhite"
+            android:gravity="center|left"
+            android:hint="请输入支付密码"
+            android:inputType="textPassword"
+            android:minHeight="40dp"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/ctv_sizen_14" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_copy"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:text="提币"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/ctv_sizen_15" />
+</LinearLayout>

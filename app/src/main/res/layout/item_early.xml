@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/base_press"
+        android:gravity="center|left"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/iv_warning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_warning" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/iv_warning"
+            android:orientation="vertical"
+            android:paddingLeft="15dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text=""
+                    android:textColor="#333333"
+                    android:textSize="@dimen/ctv_sizen_13" />
+
+                <TextView
+                    android:id="@+id/text_edition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="#858585"
+                    android:textSize="@dimen/ctv_sizen_13" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/text_brand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="left"
+                android:text="2020-11-09凯越宝盒共挖出9.67741935483871BOX,请悉知"
+                android:textColor="#858585"
+                android:textSize="@dimen/ctv_sizen_13" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

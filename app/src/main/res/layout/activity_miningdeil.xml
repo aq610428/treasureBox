@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/mRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorWhite">
+
+        <TextView
+            android:id="@+id/title_text_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:background="@null"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:textColor="@color/black33"
+            android:textSize="@dimen/ctv_sizen_16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/title_left_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@mipmap/ic_return_left"
+            android:padding="10dp"
+            android:textColor="@color/black33"
+            android:textSize="@dimen/ctv_sizen_14"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/title_right_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textColor="@color/black33"
+            android:textSize="@dimen/ctv_sizen_15" />
+
+        <TextView
+            android:id="@+id/title_right_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/title_right_btn"
+            android:layout_toLeftOf="@+id/title_right_btn"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:padding="5dp"
+            android:paddingEnd="5dp"
+            android:paddingRight="5dp"
+            android:textColor="@color/black33"
+            android:textSize="@dimen/ctv_sizen_15"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+
+    <com.aspsine.swipetoloadlayout.SwipeToLoadLayout
+        android:id="@+id/swipeToLoadLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/album_dp_50"
+        android:layout_marginBottom="60dp"
+        app:swipe_style="classic">
+
+
+        <include
+            android:id="@id/swipe_refresh_header"
+            layout="@layout/layout_google_hook_header" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/swipe_target"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/album_dp_50"
+            android:fadingEdge="none"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@mipmap/icon_path_car"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/ctv_sizen_12"
+                    android:paddingRight="@dimen/ctv_sizen_12">
+
+                    <TextView
+                        android:id="@+id/text_available"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="挖矿周期：0天"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/ctv_sizen_14" />
+
+                    <TextView
+                        android:id="@+id/text_power"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="已挖矿：0天"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/ctv_sizen_14" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="13dp"
+                    android:background="@mipmap/icon_path_car"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/album_dp_30"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="我的矿机："
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/ctv_sizen_13" />
+
+                            <TextView
+                                android:id="@+id/text_machine"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="0算力"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/ctv_sizen_13" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/btn_buy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:drawableRight="@mipmap/icon_right_ong"
+                            android:drawablePadding="5dp"
+                            android:gravity="center|left"
+                            android:text="已购列表"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/ctv_sizen_13" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="可用余额："
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/ctv_sizen_13" />
+
+                        <TextView
+                            android:id="@+id/text_balance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/ctv_sizen_13" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="挖出ETH："
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/ctv_sizen_13" />
+
+                        <TextView
+                            android:id="@+id/text_eth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/ctv_sizen_13" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/btn_add"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:drawableRight="@mipmap/icon_right_ong"
+                            android:drawablePadding="6dp"
+                            android:gravity="center|left"
+                            android:text="增加算力"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/ctv_sizen_13" />
+
+
+                        <TextView
+                            android:id="@+id/btn_redeem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:drawableRight="@mipmap/icon_right_ong"
+                            android:drawablePadding="6dp"
+                            android:gravity="center|right"
+                            android:text="算力赎回"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/ctv_sizen_13" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="13dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/text_tab1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@mipmap/icon_path_car"
+                        android:gravity="center"
+                        android:text="矿场算力:2390"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/ctv_sizen_13" />
+
+                    <TextView
+                        android:id="@+id/text_tab2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="@mipmap/icon_path_car"
+                        android:gravity="center"
+                        android:text="挖出ETH:10.963"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/ctv_sizen_13" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/album_dp_30"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginRight="13dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="日期"
+                        android:textColor="@color/black33"
+                        android:textSize="@dimen/ctv_sizen_14"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="类型"
+                        android:textColor="@color/black33"
+                        android:textSize="@dimen/ctv_sizen_14"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="金额"
+                        android:textColor="@color/black33"
+                        android:textSize="@dimen/ctv_sizen_14"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="13dp" />
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+        <include
+            android:id="@id/swipe_load_more_footer"
+            layout="@layout/layout_google_hook_footer" />
+
+    </com.aspsine.swipetoloadlayout.SwipeToLoadLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:text="提示:最小提币数量0.1ETH"
+            android:textColor="@color/black7e"
+            android:textSize="@dimen/ctv_sizen_13" />
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/next_shape"
+            android:gravity="center"
+            android:text="提币"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/ctv_sizen_15" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

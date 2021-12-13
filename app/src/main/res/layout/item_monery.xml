@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.lihang.ShadowLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:hl_cornerRadius="5dp"
+        app:hl_shadowBackColor="#fff"
+        app:hl_shadowColor="#08000000"
+        app:hl_shadowLimit="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|left"
+            android:orientation="vertical"
+            android:padding="@dimen/album_dp_10">
+
+
+            <TextView
+                android:id="@+id/text_name"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:drawableRight="@mipmap/icon_right_arrow"
+                android:gravity="center|left"
+                android:text="低配版的ETH矿机"
+                android:textColor="@color/black33"
+                android:textSize="@dimen/album_dp_15"
+                android:textStyle="bold" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center|left"
+                    android:text="挖矿周期："
+                    android:textColor="@color/black33"
+                    android:textSize="@dimen/album_sp_14" />
+
+                <TextView
+                    android:id="@+id/text_cycle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center|left"
+                    android:text="200天"
+                    android:textColor="@color/black33"
+                    android:textSize="@dimen/album_sp_14" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center|left"
+                    android:text="今日供应："
+                    android:textColor="@color/black33"
+                    android:textSize="@dimen/album_sp_14" />
+
+                <TextView
+                    android:id="@+id/text_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center|left"
+                    android:text="300算力"
+                    android:textColor="@color/black33"
+                    android:textSize="@dimen/album_sp_14" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center|left"
+                    android:text="剩余供应:"
+                    android:textColor="@color/black33"
+                    android:textSize="@dimen/album_sp_14" />
+
+                <TextView
+                    android:id="@+id/text_surplus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center|left"
+                    android:text="199算力"
+                    android:textColor="@color/black33"
+                    android:textSize="@dimen/album_sp_14" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center|left"
+                    android:text="算力价格:"
+                    android:textColor="@color/black33"
+                    android:textSize="@dimen/album_sp_14" />
+
+                <TextView
+                    android:id="@+id/text_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center|left"
+                    android:text="100USDT/1算力"
+                    android:textColor="@color/black33"
+                    android:textSize="@dimen/album_sp_14" />
+
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp">
+
+                <EditText
+                    android:id="@+id/edit_powe"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/album_dp_40"
+                    android:layout_marginRight="80dp"
+                    android:background="@drawable/edit_shape_monery"
+                    android:hint="1-29算力"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/black33"
+                    android:textSize="@dimen/album_sp_14" />
+
+                <TextView
+                    android:id="@+id/text_buy"
+                    android:layout_width="60dp"
+                    android:layout_height="@dimen/album_dp_30"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/text_usdt_bg1"
+                    android:gravity="center"
+                    android:text="购买"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/ctv_sizen_13" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+    </com.lihang.ShadowLayout>
+
+</LinearLayout>

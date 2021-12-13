@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.lihang.ShadowLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:hl_cornerRadius="5dp"
+        app:hl_shadowBackColor="#fff"
+        app:hl_shadowColor="#08000000"
+        app:hl_shadowLimit="5dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="vertical"
+            android:padding="6dp">
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/album_dp_30">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="矿机版本："
+                    android:textColor="@color/black33"
+                    android:textSize="@dimen/ctv_sizen_15"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_machine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:text="低配版ETH矿机"
+                    android:textColor="@color/black33"
+                    android:textSize="@dimen/ctv_sizen_14" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/album_dp_30">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="当前状态："
+                    android:textColor="@color/black33"
+                    android:textSize="@dimen/ctv_sizen_15"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/ctv_sizen_14" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center|left"
+                    android:text="算力价格:"
+                    android:textColor="@color/black33"
+                    android:textSize="@dimen/ctv_sizen_15"
+                    android:textStyle="bold"  />
+
+                <TextView
+                    android:id="@+id/text_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center|left"
+                    android:text="100USDT/1算力"
+                    android:textColor="@color/black33"
+                    android:textSize="@dimen/album_sp_14" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/album_dp_30">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="我的算力："
+                    android:textColor="@color/black33"
+                    android:textSize="@dimen/ctv_sizen_15"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_eth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:text="3算力"
+                    android:textColor="@color/black33"
+                    android:textSize="@dimen/ctv_sizen_14" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/album_dp_30">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="投资金额："
+                    android:textColor="@color/black33"
+                    android:textSize="@dimen/ctv_sizen_15"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:text="300USDT"
+                    android:textColor="@color/black33"
+                    android:textSize="@dimen/ctv_sizen_14" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/album_dp_30">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="挖矿周期："
+                    android:textColor="@color/black33"
+                    android:textSize="@dimen/ctv_sizen_15"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:text="100天"
+                    android:textColor="@color/black33"
+                    android:textSize="@dimen/ctv_sizen_14" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/album_dp_30">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="已产出："
+                    android:textColor="@color/black33"
+                    android:textSize="@dimen/ctv_sizen_15"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_produce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:text="0.0000ETH"
+                    android:textColor="@color/black33"
+                    android:textSize="@dimen/ctv_sizen_14" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/text_redeem"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/album_dp_45"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/redeem_shape"
+                android:gravity="center"
+                android:text="赎回"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/ctv_sizen_14"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </com.lihang.ShadowLayout>
+
+
+</LinearLayout>

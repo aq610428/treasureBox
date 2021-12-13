@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="14dp"
+        android:background="@drawable/base_press"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/text_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="关于链上钱包"
+            android:textColor="@color/black"
+            android:textSize="@dimen/ctv_sizen_16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text_verify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center|left"
+            android:lineSpacingMultiplier="1.4"
+            android:text="已审核已审核已审核已审核已审核已审核已审核已审核已审核已审核已审核已审核已审核已审核已审核已审核已审核已审核已审核已审核已审核已审核已审核已审核"
+            android:textColor="#717171"
+            android:textSize="@dimen/ctv_sizen_14" />
+
+
+        <TextView
+            android:id="@+id/text_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center|right"
+            android:text="20200604"
+            android:textColor="#717171"
+            android:textSize="@dimen/ctv_sizen_14" />
+    </LinearLayout>
+
+
+</LinearLayout>

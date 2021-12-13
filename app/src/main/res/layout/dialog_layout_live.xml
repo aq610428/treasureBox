@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_bg_yuan"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="耗油分析"
+        android:textColor="@color/black01"
+        android:textSize="@dimen/ctv_sizen_14" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/dive_line" />
+
+    <TextView
+        android:id="@+id/text_day"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="最近一天的耗油分析"
+        android:textColor="@color/black01"
+        android:textSize="@dimen/ctv_sizen_14" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/dive_line" />
+
+    <TextView
+        android:id="@+id/text_week"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="最近一周的耗油分析"
+        android:textColor="@color/black01"
+        android:textSize="@dimen/ctv_sizen_14" />
+</LinearLayout>

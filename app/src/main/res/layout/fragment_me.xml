@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="187dp"
+                    android:background="#5476FF"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="50dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="30dp">
+
+                    <ImageView
+                        android:id="@+id/icon_head"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/icon_tx" />
+
+                    <TextView
+                        android:id="@+id/text_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/icon_head"
+                        android:gravity="center"
+                        android:text="用户登录"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/ctv_sizen_17"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/text_edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:drawableRight="@mipmap/icon_right_ong"
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:text="个人主页"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/ctv_sizen_15" />
+                </RelativeLayout>
+
+                <com.lihang.ShadowLayout
+                    android:id="@+id/mLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="160dp"
+                    android:layout_marginRight="10dp"
+                    app:hl_cornerRadius="5dp"
+                    app:hl_shadowBackColor="#fff"
+                    app:hl_shadowColor="#08000000"
+                    app:hl_shadowLimit="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/base_press"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="8dp">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerView1"
+                            android:layout_width="match_parent"
+                            android:fadingEdge="none"
+                            android:scrollbars="none"
+                            android:overScrollMode="never"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </com.lihang.ShadowLayout>
+
+                <com.lihang.ShadowLayout
+                    android:id="@+id/rl_note"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mLayout"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    app:hl_cornerRadius="5dp"
+                    app:hl_shadowBackColor="#fff"
+                    app:hl_shadowColor="#08000000"
+                    app:hl_shadowLimit="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center|left"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:src="@mipmap/icon_note_me" />
+
+
+                        <com.treasure.million.weight.MarqueeTextView
+                            android:id="@+id/mENoticeView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="5dp"
+                            android:ellipsize="marquee"
+                            android:gravity="center|left"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:paddingRight="10dp"
+                            android:singleLine="true"
+                            android:textColor="#131313"
+                            android:textSize="@dimen/ctv_sizen_13" />
+
+
+                    </LinearLayout>
+                </com.lihang.ShadowLayout>
+
+
+                <com.lihang.ShadowLayout
+                    android:id="@+id/msdl_system1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_note"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    app:hl_cornerRadius="5dp"
+                    app:hl_shadowBackColor="#fff"
+                    app:hl_shadowColor="#08000000"
+                    app:hl_shadowLimit="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="13dp"
+                            android:gravity="center|left"
+                            android:paddingLeft="10dp"
+                            android:text="常用工具"
+                            android:textColor="#131313"
+                            android:textSize="@dimen/ctv_sizen_15"
+                            android:textStyle="bold" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerView"
+                            android:layout_width="match_parent"
+                            android:fadingEdge="none"
+                            android:scrollbars="none"
+                            android:overScrollMode="never"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+                </com.lihang.ShadowLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

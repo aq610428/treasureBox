@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_title" />
+
+    <LinearLayout
+        android:id="@+id/ll_usdt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@mipmap/icon_bg_bc"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+
+        <TextView
+            android:id="@+id/text_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|left"
+            android:text="USDT激活"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/ctv_sizen_17" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text_usd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center|left"
+                android:text="可用USDT：0"
+                android:textColor="#A5B7FF"
+                android:textSize="@dimen/ctv_sizen_12" />
+
+            <TextView
+                android:id="@+id/text_usdt_charge"
+                android:layout_width="57dp"
+                android:layout_height="28dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/text_usdt_charge"
+                android:gravity="center"
+                android:text="充币"
+                android:textColor="#3F63F4"
+                android:textSize="@dimen/ctv_sizen_12" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/text_about"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="本次激活需要消耗USDT数量：0.00 \n欢迎您激活玖亿宝盒挖矿"
+            android:textColor="#A5B7FF"
+            android:textSize="@dimen/ctv_sizen_12" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_extension"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/usdt_bg_shape"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|left"
+            android:text="推广奖励激活"
+            android:textColor="#3F63F4"
+            android:textSize="@dimen/ctv_sizen_17" />
+
+
+        <TextView
+            android:id="@+id/text_extension"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:lineSpacingMultiplier="1.2"
+            android:text="可用奖励激活：0 "
+            android:textColor="#8BA2FF"
+            android:textSize="@dimen/ctv_sizen_12" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:lineSpacingMultiplier="1.2"
+            android:text="本次激活通过直接推荐5位车主上链获得的奖励激活机会。\n欢迎您参与推广玖亿宝盒，推广越多奖励越多。"
+            android:textColor="#8BA2FF"
+            android:textSize="@dimen/ctv_sizen_12" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/text_key"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:text="激活挖矿"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/ctv_sizen_16" />
+</LinearLayout>

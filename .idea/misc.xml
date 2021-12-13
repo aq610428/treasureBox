@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/treasureBox/app/src/main/res/drawable/asets_bg.xml" value="0.3253333333333333" />
+        <entry key="..\:/treasureBox/app/src/main/res/drawable/book_drawable.xml" value="0.3253333333333333" />
+        <entry key="..\:/treasureBox/app/src/main/res/drawable/chosen_drawable.xml" value="0.3253333333333333" />
+        <entry key="..\:/treasureBox/app/src/main/res/drawable/chosen_drawable1.xml" value="0.3253333333333333" />
+        <entry key="..\:/treasureBox/app/src/main/res/drawable/chosen_drawable2.xml" value="0.32972972972972975" />
+        <entry key="..\:/treasureBox/app/src/main/res/drawable/edit_shape_monery.xml" value="0.32972972972972975" />
+        <entry key="..\:/treasureBox/app/src/main/res/drawable/erc_shape.xml" value="0.32972972972972975" />
+        <entry key="..\:/treasureBox/app/src/main/res/drawable/me_drawable.xml" value="0.3253333333333333" />
+        <entry key="..\:/treasureBox/app/src/main/res/drawable/redeem_shape.xml" value="0.32972972972972975" />
+        <entry key="..\:/treasureBox/app/src/main/res/drawable/shape_bg_rdres.xml" value="0.32972972972972975" />
+        <entry key="..\:/treasureBox/app/src/main/res/drawable/shape_bg_yuan.xml" value="0.32972972972972975" />
+        <entry key="..\:/treasureBox/app/src/main/res/drawable/shape_map_view.xml" value="0.32972972972972975" />
+        <entry key="..\:/treasureBox/app/src/main/res/drawable/text_usdt_bg.xml" value="0.32972972972972975" />
+        <entry key="..\:/treasureBox/app/src/main/res/drawable/text_usdt_bg1.xml" value="0.32972972972972975" />
+        <entry key="..\:/treasureBox/app/src/main/res/drawable/trc_shape.xml" value="0.32972972972972975" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/activity_draw.xml" value="0.31576576576576576" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/activity_draw1.xml" value="0.31576576576576576" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/activity_invitation.xml" value="0.31576576576576576" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/activity_location_move.xml" value="0.31576576576576576" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/activity_login.xml" value="0.31155555555555553" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/activity_medical.xml" value="0.31576576576576576" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/activity_miningdeil.xml" value="0.35209825997952915" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/activity_order.xml" value="0.31576576576576576" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/activity_recharge.xml" value="0.31576576576576576" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/activity_red.xml" value="0.31576576576576576" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/activity_redeem.xml" value="0.31576576576576576" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/activity_title.xml" value="0.31576576576576576" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/dialog_generals_down.xml" value="0.31576576576576576" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/dialog_layout1.xml" value="0.31576576576576576" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/dialog_layout_bind.xml" value="0.31576576576576576" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/dialog_layout_box.xml" value="0.31576576576576576" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/dialog_layout_item.xml" value="0.31576576576576576" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/dialog_layout_live.xml" value="0.31576576576576576" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/dialog_layout_mine.xml" value="0.31576576576576576" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/dialog_layout_ming.xml" value="0.31576576576576576" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/dialog_layout_pass.xml" value="0.31576576576576576" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/dialog_layout_pay1.xml" value="0.31576576576576576" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/dialog_layout_user.xml" value="0.31576576576576576" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/dialog_map.xml" value="0.31576576576576576" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/fragment_car.xml" value="0.31576576576576576" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/fragment_me.xml" value="0.31576576576576576" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/fragment_morey.xml" value="0.31576576576576576" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/fragment_ore.xml" value="0.31576576576576576" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/fragment_orelost.xml" value="0.31576576576576576" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/fragment_tab1.xml" value="0.31576576576576576" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/fragment_tab2.xml" value="0.31155555555555553" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/fragment_tab3.xml" value="0.31576576576576576" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/fragment_tab4.xml" value="0.31155555555555553" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/fragment_tab5.xml" value="0.31155555555555553" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/fragment_wis.xml" value="0.5" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/item_advert_list.xml" value="0.31576576576576576" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/item_asets.xml" value="0.31576576576576576" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/item_asets_list.xml" value="0.31576576576576576" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/item_fragment_me.xml" value="0.31576576576576576" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/item_keep_car.xml" value="0.31576576576576576" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/item_monery.xml" value="0.31576576576576576" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/item_red.xml" value="0.31576576576576576" />
+        <entry key="..\:/treasureBox/app/src/main/res/layout/no_data_view.xml" value="0.31576576576576576" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

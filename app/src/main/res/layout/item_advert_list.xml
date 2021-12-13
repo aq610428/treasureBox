@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal">
+
+
+    <TextView
+        android:id="@+id/text_date"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.1"
+        android:gravity="center"
+        android:text="2021-10-29 17:29:59"
+        android:textColor="@color/black33"
+        android:textSize="@dimen/ctv_sizen_13" />
+
+    <TextView
+        android:id="@+id/text_type"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.9"
+        android:gravity="center"
+        android:text="直推奖励"
+        android:textColor="@color/black33"
+        android:textSize="@dimen/ctv_sizen_13" />
+
+
+    <TextView
+        android:id="@+id/text_num"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="0.000784"
+        android:textColor="@color/black33"
+        android:textSize="@dimen/ctv_sizen_13" />
+
+</LinearLayout>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/album_dp_50"
+        android:gravity="center"
+        android:text="惠购车"
+        android:textColor="@color/black33"
+        android:textSize="@dimen/ctv_sizen_18"
+        android:textStyle="bold" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginRight="14dp"
+        android:background="@drawable/tab_aha"
+        android:padding="14dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center|left"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/icon_usdt_zc"
+                    android:drawablePadding="5dp"
+                    android:text="昨日补助(USDT):"
+                    android:textColor="#97B2FF"
+                    android:textSize="@dimen/ctv_sizen_13" />
+
+                <TextView
+                    android:id="@+id/text_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/album_dp_10"
+                    android:text="0"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/ctv_sizen_14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="left"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/icon_usdt_zc"
+                    android:drawablePadding="5dp"
+                    android:gravity="left"
+                    android:text="账户可用(USDT):"
+                    android:textColor="#97B2FF"
+                    android:textSize="@dimen/ctv_sizen_13" />
+
+                <TextView
+                    android:id="@+id/text_usdt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/album_dp_10"
+                    android:gravity="left"
+                    android:text="0"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/ctv_sizen_14" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_usdt_carry"
+            android:layout_width="60dp"
+            android:layout_height="28dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/text_usdt_bg"
+            android:gravity="center"
+            android:text="提币"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/ctv_sizen_12" />
+
+
+    </RelativeLayout>
+
+    <com.aspsine.swipetoloadlayout.SwipeToLoadLayout
+        android:id="@+id/swipeToLoadLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_tab"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/album_dp_10"
+        app:swipe_style="classic">
+
+
+        <include
+            android:id="@id/swipe_refresh_header"
+            layout="@layout/layout_google_hook_header" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/swipe_target"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fadingEdge="none"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="15dp">
+
+                    <ImageView
+                        android:id="@+id/text_line"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="2dp"
+                        android:src="@mipmap/icon_line_zc" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/text_line"
+                        android:gravity="center"
+                        android:text="交易列表"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/ctv_sizen_15"
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/album_sp_14"
+                    android:layout_marginRight="@dimen/album_sp_14" />
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+        <include
+            android:id="@id/swipe_load_more_footer"
+            layout="@layout/layout_google_hook_footer" />
+    </com.aspsine.swipetoloadlayout.SwipeToLoadLayout>
+
+
+    <com.treasure.million.weight.NoDataView
+        android:id="@+id/noDataView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+</RelativeLayout>

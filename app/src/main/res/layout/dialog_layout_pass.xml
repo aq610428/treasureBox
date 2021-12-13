@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/shape_bg_rdres"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center|left"
+            android:text="资金密码"
+            android:textColor="@color/black33"
+            android:textSize="@dimen/ctv_sizen_16"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_name"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="交易密码"
+                android:textColor="@color/black33"
+                android:textSize="@dimen/ctv_sizen_15" />
+
+
+            <EditText
+                android:id="@+id/edit_pass"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/edit_shape_monery"
+                android:gravity="center|left"
+                android:hint="您输入交易密码"
+                android:inputType="textPassword"
+                android:paddingLeft="10dp"
+                android:textColor="@color/black33"
+                android:textSize="@dimen/ctv_sizen_15" />
+
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/dive_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/confirm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/next_shape"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/ctv_sizen_16" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

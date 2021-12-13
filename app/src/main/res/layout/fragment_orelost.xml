@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="126dp"
+        android:background="@mipmap/ic_tab6_usd">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="43.5dp"
+            android:layout_marginRight="14dp">
+
+            <TextView
+                android:id="@+id/text_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="挖矿"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/ctv_sizen_25"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/text_history"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:drawableRight="@mipmap/ic_history_tab"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:textSize="@dimen/ctv_sizen_25"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="31dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="14dp"
+            android:background="#BDCAFB"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/text_tab1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="行情"
+                android:textColor="#3F63F4"
+                android:textSize="@dimen/ctv_sizen_13"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_tab2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#BDCAFB"
+                android:gravity="center"
+                android:text="挖矿"
+                android:textColor="#3F63F4"
+                android:textSize="@dimen/ctv_sizen_13"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/text_tab3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#BDCAFB"
+                android:gravity="center"
+                android:text="资产"
+                android:textColor="#3F63F4"
+                android:textSize="@dimen/ctv_sizen_13"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/text_tab4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#BDCAFB"
+                android:gravity="center"
+                android:text="社区"
+                android:textColor="#3F63F4"
+                android:textSize="@dimen/ctv_sizen_13"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>
+
+
