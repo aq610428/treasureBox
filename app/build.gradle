@@ -7,8 +7,8 @@ android {
         applicationId "com.treasure.million"
         minSdkVersion 16
         targetSdkVersion 29
-        versionCode 30
-        versionName "1.4.0"
+        versionCode 32
+        versionName "1.5.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         flavorDimensions "versionCode"
         multiDexEnabled true
@@ -56,7 +56,6 @@ android {
             zipAlignEnabled false  //压缩优化
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
-
     }
 
     compileOptions {

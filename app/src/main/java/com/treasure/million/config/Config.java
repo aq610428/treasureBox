@@ -10,11 +10,11 @@ public class Config {
     // 当前环境MI
     public static Environment env = Environment.PRODUCTION;
     // 开发环境地
-    public static String DEVELOPMENT_PUBLIC_SERVER_URL = "http://47.119.169.98:8083";  //挖矿相关域名
+    public static String DEVELOPMENT_PUBLIC_SERVER_URL = "http://8.134.127.246:8083";  //挖矿相关域名
     // 测试环境地址
-    public static String TEST_PUBLIC_SERVER_URL = "http://47.119.169.98:8083";
+    public static String TEST_PUBLIC_SERVER_URL = "http://8.134.127.246:8083";
     // 线上环境地址
-    public static String PRODUCTION_PUBLIC_SERVER_URL = "http://kb.jkabe.com";
+    public static String PRODUCTION_PUBLIC_SERVER_URL = "http://8.134.127.246:8083";
 
     /********************新版本Api********************/
     public static String getOpenNewApi() {

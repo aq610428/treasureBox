@@ -8,7 +8,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.annotation.Nullable;
+
 import com.permissionx.guolindev.PermissionX;
 import com.permissionx.guolindev.callback.RequestCallback;
 import com.treasure.million.R;
@@ -19,14 +21,18 @@ import com.treasure.million.config.Api;
 import com.treasure.million.config.NetWorkListener;
 import com.treasure.million.config.okHttpModel;
 import com.treasure.million.util.Constants;
+import com.treasure.million.util.JsonParse;
 import com.treasure.million.util.Md5Util;
 import com.treasure.million.util.SaveUtils;
+import com.treasure.million.util.SystemTools;
 import com.treasure.million.util.ToastUtil;
 import com.treasure.million.util.Utility;
 import com.treasure.million.weight.DialogUtils;
 import com.uuzuche.lib_zxing.activity.CaptureActivity;
 import com.uuzuche.lib_zxing.activity.CodeUtils;
+
 import org.json.JSONObject;
+
 import java.util.List;
 import java.util.Map;
 
@@ -36,7 +42,7 @@ import java.util.Map;
  * @name:充币
  */
 public class DrawActivity1 extends BaseActivity implements NetWorkListener {
-    private TextView title_text_tv, title_left_btn, text_copy, text_dig, text_service, text_user;
+    private TextView title_text_tv, title_left_btn, text_copy, text_dig, text_service, text_user, text_service_box;
     private UsdtInfo usdtBean;
     private TextView text_trc, text_erc;
     private EditText text_address, et_num, et_password;
@@ -48,9 +54,9 @@ public class DrawActivity1 extends BaseActivity implements NetWorkListener {
         setContentView(R.layout.activity_draw1);
     }
 
-
     @Override
     protected void initView() {
+        text_service_box = getView(R.id.text_service_box);
         text_erc = getView(R.id.text_erc);
         text_trc = getView(R.id.text_trc);
         iv_code = getView(R.id.iv_code);
@@ -70,22 +76,21 @@ public class DrawActivity1 extends BaseActivity implements NetWorkListener {
         iv_code.setOnClickListener(this);
         text_erc.setOnClickListener(this);
         text_trc.setOnClickListener(this);
-        usdtBean = (UsdtInfo) getIntent().getSerializableExtra("usdBean");
-        if (usdtBean != null) {
-            text_user.setText("可用" + usdtBean.getUserable());
-            et_num.setHint("最小提币数" + usdtBean.getMinLimit() + "");
-            text_service.setText(usdtBean.getFee() + "");
-            if ("1".equals(usdtBean.getIsLock())) {
-                DialogUtils.showPassword2(this);
-            } else {
-                DialogUtils.showBoxMsg(this);
-            }
-        }
+    }
+
+
+    public void query1() {
+        String sign = "memberid=" + SaveUtils.getSaveInfo().getId() + "&partnerid=" + Constants.PARTNERID1 + Constants.SECREKEY1;
+        Map<String, String> params = okHttpModel.getParams();
+        params.put("memberid", SaveUtils.getSaveInfo().getId());
+        params.put("partnerid", Constants.PARTNERID1);
+        params.put("sign", Md5Util.encode(sign));
+        okHttpModel.post(Api.REDE_BLANCE_USDT, params, Api.REDE_BLANCE_USDT_ID, this);
     }
 
     @Override
     protected void initData() {
-
+        query1();
     }
 
 
@@ -103,18 +108,22 @@ public class DrawActivity1 extends BaseActivity implements NetWorkListener {
                 checkPermission();
                 break;
             case R.id.text_trc:
-                coinTypeId="TRCUSDT";
+                coinTypeId = "TRCUSDT";
                 text_trc.setTextColor(Color.parseColor("#3F63F4"));
                 text_trc.setBackgroundResource(R.drawable.erc_shape);
                 text_erc.setTextColor(Color.parseColor("#333333"));
                 text_erc.setBackgroundResource(R.drawable.trc_shape);
+                text_service_box.setText("USDT");
+                text_service.setText(usdtBean.getTrc_fee() + "");
                 break;
             case R.id.text_erc:
-                coinTypeId="USDT";
+                coinTypeId = "USDT";
+                text_service.setText(usdtBean.getFee() + "");
                 text_erc.setTextColor(Color.parseColor("#3F63F4"));
                 text_erc.setBackgroundResource(R.drawable.erc_shape);
                 text_trc.setTextColor(Color.parseColor("#333333"));
                 text_trc.setBackgroundResource(R.drawable.trc_shape);
+                text_service_box.setText("ETH");
                 break;
         }
     }
@@ -176,14 +185,28 @@ public class DrawActivity1 extends BaseActivity implements NetWorkListener {
             ToastUtil.showToast("支付密码不能为空");
             return;
         }
-        String sign = "address=" + address + "&balance=" + balance+"&coinTypeId"+coinTypeId + "&fee=" + fee + "&memberid=" + SaveUtils.getSaveInfo().getId() + "&partnerid=" + Constants.PARTNERID1
+
+        if ("TRCUSDT".equals(coinTypeId)) {
+            if (!SystemTools.isTronAddress(address)) {
+                ToastUtil.showToast("提现地址不正确");
+                return;
+            }
+        }
+
+        if ("USDT".equals(coinTypeId)) {
+            if (!SystemTools.isEthAddress(address)) {
+                ToastUtil.showToast("提现地址不正确");
+                return;
+            }
+        }
+
+        String sign = "address=" + address + "&balance=" + balance + "&fee=" + fee + "&memberid=" + SaveUtils.getSaveInfo().getId() + "&partnerid=" + Constants.PARTNERID1
                 + "&paypassword=" + Md5Util.encode(password)
                 + Constants.SECREKEY1;
         showProgressDialog(this, false);
         Map<String, String> params = okHttpModel.getParams();
         params.put("address", address);
         params.put("balance", balance);
-        params.put("coinTypeId", coinTypeId);
         params.put("fee", fee);
         params.put("memberid", SaveUtils.getSaveInfo().getId());
         params.put("partnerid", Constants.PARTNERID1);
@@ -204,6 +227,12 @@ public class DrawActivity1 extends BaseActivity implements NetWorkListener {
                         ToastUtil.showToast(commonality.getErrorDesc() + "");
                         finish();
                         break;
+                    case Api.REDE_BLANCE_USDT_ID:
+                        usdtBean = JsonParse.getJSONObUsdtInfo(object);
+                        if (usdtBean != null) {
+                            updateView();
+                        }
+                        break;
                 }
             } else {
                 ToastUtil.showToast(commonality.getErrorDesc());
@@ -212,6 +241,17 @@ public class DrawActivity1 extends BaseActivity implements NetWorkListener {
             ToastUtil.showToast(commonality.getErrorDesc());
         }
         stopProgressDialog();
+    }
+
+    public void updateView() {
+        text_user.setText("可用" + usdtBean.getUserable());
+        et_num.setHint("最小提币数" + usdtBean.getMinLimit() + "");
+        text_service.setText(usdtBean.getFee() + "");
+        if ("1".equals(usdtBean.getIsLock())) {
+            DialogUtils.showPassword2(this);
+        } else {
+            DialogUtils.showBoxMsg(this);
+        }
     }
 
 

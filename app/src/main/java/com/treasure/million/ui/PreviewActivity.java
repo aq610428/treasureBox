@@ -12,9 +12,7 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
-
 import com.treasure.million.R;
 import com.treasure.million.base.BaseActivity;
 import com.treasure.million.base.BaseApplication;

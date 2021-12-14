@@ -18,15 +18,19 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.Toast;
+
 import androidx.core.content.FileProvider;
+
 import com.amap.api.maps.model.LatLng;
 import com.treasure.million.base.BaseApplication;
+
 import java.io.File;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.regex.Pattern;
+
 import static android.content.Context.INPUT_METHOD_SERVICE;
 
 
@@ -82,6 +86,19 @@ public final class SystemTools {
     }
 
 
+    // 验证波场地址格式
+    public static boolean isTronAddress(String address) {
+        String pattern = "^T([a-z]|[A-Z]|[0-9]){33}";
+        return Pattern.matches(pattern, address) == true ? true : false;
+    }
+
+    // 验证以太坊地址格式
+    public static boolean isEthAddress(String address) {
+        String pattern = "^0x([a-z]|[A-Z]|[0-9]){40}";
+        return Pattern.matches(pattern, address) == true ? true : false;
+    }
+
+
     /**
      * 调用第三方浏览器打开
      *
@@ -116,7 +133,6 @@ public final class SystemTools {
             Toast.makeText(activity, "您没有安装应用市场", Toast.LENGTH_SHORT).show();
         }
     }
-
 
 
     /**

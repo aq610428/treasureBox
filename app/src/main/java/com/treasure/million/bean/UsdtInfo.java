@@ -20,6 +20,16 @@ public class UsdtInfo implements Serializable {
     public double fee;
     public String descriptionToString;
 
+    public double getTrc_fee() {
+        return trc_fee;
+    }
+
+    public void setTrc_fee(double trc_fee) {
+        this.trc_fee = trc_fee;
+    }
+
+    private double trc_fee;
+
     public String getId() {
         return id;
     }

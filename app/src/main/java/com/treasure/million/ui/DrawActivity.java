@@ -15,9 +15,7 @@ import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.Nullable;
-
 import com.treasure.million.base.BaseActivity;
 import com.treasure.million.bean.Typeitems;
 import com.treasure.million.bean.Usdinfo;
@@ -25,9 +23,9 @@ import com.treasure.million.bean.UsdBean;
 import com.treasure.million.util.BigDecimalUtils;
 import com.treasure.million.util.Constants;
 import com.treasure.million.util.JsonParse;
-import com.treasure.million.util.LogUtils;
 import com.treasure.million.util.Md5Util;
 import com.treasure.million.util.SaveUtils;
+import com.treasure.million.util.SystemTools;
 import com.treasure.million.util.ToastUtil;
 import com.treasure.million.util.Utility;
 import com.treasure.million.bean.CommonalityModel;
@@ -40,9 +38,7 @@ import com.permissionx.guolindev.callback.RequestCallback;
 import com.treasure.million.weight.DialogUtils;
 import com.uuzuche.lib_zxing.activity.CaptureActivity;
 import com.uuzuche.lib_zxing.activity.CodeUtils;
-
 import org.json.JSONObject;
-
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -56,7 +52,7 @@ import java.util.Map;
 public class DrawActivity extends BaseActivity implements NetWorkListener {
     private TextView title_text_tv, title_left_btn, text_copy, text_dig, text_service, text_num_box, text_service_box, text_user;
     private UsdBean usdtBean;
-    private String coinTypeId = "2";
+    private String coinTypeId = "USDT";
     private EditText text_address, et_num, et_password;
     private List<Typeitems> typeitems = new ArrayList<>();
     private List<Usdinfo> usdinfos = new ArrayList<>();
@@ -109,6 +105,7 @@ public class DrawActivity extends BaseActivity implements NetWorkListener {
                 text_num_box.setText(usdtBean.getEth().getCoinTypeName());
             }
         }
+
     }
 
     @Override
@@ -166,6 +163,7 @@ public class DrawActivity extends BaseActivity implements NetWorkListener {
                 text_user.setText("可用" + usdtBean.getUsdt().getUserable());
                 text_dig.setText(usdtBean.getUsdt().getCoinTypeName());
                 text_num_box.setText(usdtBean.getUsdt().getCoinTypeName());
+                text_service_box.setText("USDT");
                 update();
                 break;
             case R.id.text_erc:
@@ -180,6 +178,7 @@ public class DrawActivity extends BaseActivity implements NetWorkListener {
                 text_user.setText("可用" + usdtBean.getUsdt().getUserable());
                 text_dig.setText(usdtBean.getUsdt().getCoinTypeName());
                 text_num_box.setText(usdtBean.getUsdt().getCoinTypeName());
+                text_service_box.setText("ETH");
                 update();
                 break;
         }
@@ -262,6 +261,21 @@ public class DrawActivity extends BaseActivity implements NetWorkListener {
             ToastUtil.showToast("支付密码不能为空");
             return;
         }
+
+        if ("TRCUSDT".equals(coinTypeId)) {
+            if (!SystemTools.isTronAddress(address)) {
+                ToastUtil.showToast("提现地址不正确");
+                return;
+            }
+        }
+
+        if ("USDT".equals(coinTypeId)) {
+            if (!SystemTools.isEthAddress(address)) {
+                ToastUtil.showToast("提现地址不正确");
+                return;
+            }
+        }
+
         String sign = "address=" + address + "&balance=" + balance + "&coinTypeId=" + coinTypeId + "&fee=" + fee + "&memberid=" + SaveUtils.getSaveInfo().getId() + "&partnerid=" + Constants.PARTNERID1
                 + "&paypassword=" + Md5Util.encode(password)
                 + Constants.SECREKEY1;
@@ -353,11 +367,7 @@ public class DrawActivity extends BaseActivity implements NetWorkListener {
     private void update() {
         for (int i = 0; i < typeitems.size(); i++) {
             Typeitems bean = typeitems.get(i);
-            String id=coinTypeId;
-            if ("TRCUSDT".equals(id)){
-                id="USDT";
-            }
-            if (id.equals(bean.getCoinTypeId())) {
+            if (coinTypeId.equals(bean.getCoinTypeId())) {
                 serviceFee = bean.getServiceFee();
                 minBalance = bean.getMinBalance();
                 maxBalance = bean.getMaxBalance();

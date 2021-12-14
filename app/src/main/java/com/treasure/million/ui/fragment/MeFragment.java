@@ -160,7 +160,7 @@ public class MeFragment extends BaseFragment implements NetWorkListener, View.On
                     case "联系我们":
                         Intent intent = new Intent(getContext(), PreviewActivity.class);
                         intent.putExtra("name", "加入社群");
-                        intent.putExtra("url", "http://openapi.jkabe.com/golo/about");
+                        intent.putExtra("url", "http://8.134.127.246:8083/resource/about");
                         startActivity(intent);
                         break;
                     case "设备解除":
@@ -185,7 +185,7 @@ public class MeFragment extends BaseFragment implements NetWorkListener, View.On
                     case "我的团队":
                         Intent intent1 = new Intent(getContext(), PreviewActivity.class);
                         intent1.putExtra("name", "我的团队");
-                        intent1.putExtra("url", "http://kb.jkabe.com/box/myteam/box/myteam?friendcode=" + SaveUtils.getSaveInfo().getRmcode() + "&memberid=" + SaveUtils.getSaveInfo().getId() + "&apptype=" + Constants.TYPE);
+                        intent1.putExtra("url", Config.getOpenNewApi()+"/box/myteam/box/myteam?friendcode=" + SaveUtils.getSaveInfo().getRmcode() + "&memberid=" + SaveUtils.getSaveInfo().getId() + "&apptype=" + Constants.TYPE);
                         startActivity(intent1);
                         break;
                 }
