@@ -6,7 +6,6 @@ public class Config {
         TEST, //
         PRODUCTION, // 线上环境
     }
-
     // 当前环境MI
     public static Environment env = Environment.PRODUCTION;
     // 开发环境地
