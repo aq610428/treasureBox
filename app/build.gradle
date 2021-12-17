@@ -7,8 +7,8 @@ android {
         applicationId "com.treasure.million"
         minSdkVersion 16
         targetSdkVersion 29
-        versionCode 32
-        versionName "1.5.0"
+        versionCode 33
+        versionName "2.0.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         flavorDimensions "versionCode"
         multiDexEnabled true

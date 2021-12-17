@@ -266,6 +266,7 @@ public class UserActivity extends BaseActivity implements NetWorkListener {
         params.put("partnerid", Constants.PARTNERID);
         params.put("memberid", info.getId());
         params.put("sign", Md5Util.encode(sign));
+        LogUtils.e(Api.GET_UPLOAD_USER+params);
         OkGo.<String>post(Api.GET_UPLOAD_USER).isMultipart(true).tag(BaseApplication.getContext()).params(params).params("file", file).execute(new StringCallback() {
             @Override
             public void onSuccess(Response<String> response) {
