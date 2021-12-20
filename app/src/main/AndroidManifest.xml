@@ -3,13 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.treasure.million">
 
-    <!--
-         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
-         Google Maps Android API v2, but you must specify either coarse or fine
-         location permissions for the "MyLocation" functionality.
-    -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.INTERNET" /> <!-- 用于进行网络定位 -->
     <uses-permission
         android:name="android.permission.ACCESS_COARSE_LOCATION"
@@ -320,15 +314,24 @@
             <intent-filter>
                 <action android:name="cn.jiguang.user.service.action" />
             </intent-filter>
-        </service> <!-- User defined.  For test only  用户自定义接收消息器,3.0.7开始支持,目前新tag/alias接口设置结果会在该广播接收器对应的方法中回调 -->
+        </service>
+
+
+        <!-- User defined.  For test only  用户自定义接收消息器,3.0.7开始支持,目前新tag/alias接口设置结果会在该广播接收器对应的方法中回调 -->
         <!-- since 3.3.0 接收JPush相关事件 -->
-        <receiver android:name=".config.PushMessageReceiver">
+        <receiver
+            android:name=".config.PushMessageReceiver"
+            android:enabled="true"
+            android:exported="false" >
             <intent-filter>
                 <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
-
                 <category android:name="${applicationId}" />
             </intent-filter>
-        </receiver> <!-- Required SDK核心功能 -->
+        </receiver>
+
+
+
+        <!-- Required SDK核心功能 -->
         <receiver
             android:name="cn.jpush.android.service.AlarmReceiver"
             android:exported="false" /> <!-- 3.5.0新增，用于定时展示功能 -->
@@ -347,6 +350,10 @@
                 <category android:name="${applicationId}" />
             </intent-filter>
         </receiver>
+
+
+
+
         <receiver
             android:name="cn.jpush.android.service.PushReceiver"
             android:enabled="true">
@@ -366,6 +373,9 @@
                 <data android:scheme="package" />
             </intent-filter>
         </receiver> <!-- since 3.1.0 Required SDK 核心功能 -->
+
+
+
         <provider
             android:name="cn.jpush.android.service.DownloadProvider"
             android:authorities="${applicationId}.DownloadProvider"
@@ -387,12 +397,18 @@
             android:exported="false"
             android:process=":pushcore" />
 
-        <provider
-            android:name="cn.jpush.android.service.DataProvider"
-            android:authorities="${applicationId}.DataProvider"
-            android:exported="false"
-            android:process=":pushcore" />
+        <!-- 若不启用该功能可删除该组件，或把 enabled 设置成 false ；App 不会被其他 App 拉起，但会拉起其他的 App。 -->
+        <!-- 若不启用该功能可删除该组件，或把 enabled 设置成 false ；App 不会被其他 App 拉起，但会拉起其他的 App。 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
 
+                <category android:name="${JPUSH_PKGNAME}" />
+            </intent-filter>
+        </service>
 
     </application>
 

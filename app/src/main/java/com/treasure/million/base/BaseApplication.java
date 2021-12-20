@@ -4,18 +4,24 @@ import android.app.ActivityManager;
 import android.app.Application;
 import android.content.Context;
 import android.os.Build;
+import android.os.Handler;
 import android.os.StrictMode;
 import android.webkit.WebView;
 
 import androidx.annotation.RequiresApi;
 import androidx.multidex.MultiDex;
+
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.cache.CacheMode;
 import com.lzy.okgo.https.HttpsUtils;
 import com.tencent.bugly.Bugly;
+import com.treasure.million.ui.StartActivity;
 import com.treasure.million.weight.ActivityTaskManager;
 import com.uuzuche.lib_zxing.activity.ZXingLibrary;
+
 import java.util.concurrent.TimeUnit;
+
+import cn.jiguang.api.utils.JCollectionAuth;
 import cn.jpush.android.api.JPushInterface;
 import okhttp3.OkHttpClient;
 
@@ -37,16 +43,21 @@ public class BaseApplication extends Application {
         activityTaskManager = ActivityTaskManager.getInstance();//初始化Activity管理器
         initOkHttpClient();
         registerActivityLifecycleCallbacks(new ActivityLifecycleListener());
-        JPushInterface.setDebugMode(true);
-        JPushInterface.init(this);
+
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
         StrictMode.setVmPolicy(builder.build());
         builder.detectFileUriExposure();
         Bugly.init(getApplicationContext(), "ab9e0c0137", false);
 
-
         ZXingLibrary.initDisplayOpinion(this);
         initWebView();
+        initJPush();
+    }
+
+    /******极光隐私政策********/
+    public void initJPush() {
+        JPushInterface.setDebugMode(true);
+        JPushInterface.init(this);
     }
 
 
@@ -82,7 +93,7 @@ public class BaseApplication extends Application {
 //                .addCommonHeaders(headers);
     }
 
-    public  String getProcessName(Context context) {
+    public String getProcessName(Context context) {
         if (context == null) return null;
         ActivityManager manager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
         for (ActivityManager.RunningAppProcessInfo processInfo : manager.getRunningAppProcesses()) {
@@ -92,7 +103,6 @@ public class BaseApplication extends Application {
         }
         return null;
     }
-
 
 
     /**

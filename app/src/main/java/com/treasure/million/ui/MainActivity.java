@@ -1,23 +1,15 @@
 package com.treasure.million.ui;
 
 import android.Manifest;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.text.Spannable;
-import android.text.SpannableStringBuilder;
-import android.text.style.ForegroundColorSpan;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TextView;
-
 import androidx.fragment.app.FragmentTabHost;
-
-import com.amap.api.maps.MapsInitializer;
 import com.permissionx.guolindev.PermissionX;
 import com.permissionx.guolindev.callback.RequestCallback;
 import com.tencent.bugly.beta.Beta;
@@ -47,12 +39,9 @@ import com.treasure.million.util.ToastUtil;
 import com.treasure.million.util.Utility;
 import com.treasure.million.weight.DialogUtils;
 import com.treasure.million.weight.UpdateManager;
-
 import org.json.JSONObject;
-
 import java.util.List;
 import java.util.Map;
-
 import cn.jpush.android.api.JPushInterface;
 
 /*****
@@ -83,6 +72,8 @@ public class MainActivity extends BaseActivity1 implements NetWorkListener {
             LogUtils.e(upgradeInfo.apkUrl);
             return;
         }
+        LogUtils.e("极光注册RegistrationID="+JPushInterface.getRegistrationID(this));
+        LogUtils.e("极光注册RegistrationID="+JPushInterface.getUdid(this));
     }
 
 

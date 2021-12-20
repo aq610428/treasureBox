@@ -17,6 +17,9 @@ import com.treasure.million.bean.UserInfo;
 import com.treasure.million.util.SaveUtils;
 import com.treasure.million.util.Utility;
 
+import cn.jiguang.api.utils.JCollectionAuth;
+import cn.jpush.android.api.JPushInterface;
+
 
 /***
  *
@@ -78,6 +81,8 @@ public class StartActivity extends BaseActivity1 {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         SaveUtils.saveMap("true");
+                        JCollectionAuth.setAuth(StartActivity.this, true);
+                        BaseApplication.getInstance().initJPush();
                         MapsInitializer.updatePrivacyAgree(StartActivity.this, true);
                         start();
                     }
@@ -86,6 +91,8 @@ public class StartActivity extends BaseActivity1 {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         SaveUtils.saveMap("true");
+                        JCollectionAuth.setAuth(StartActivity.this, true);
+                        BaseApplication.getInstance().initJPush();
                         MapsInitializer.updatePrivacyAgree(StartActivity.this, true);
                         start();
                     }

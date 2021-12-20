@@ -86,7 +86,7 @@ public class PushMessageReceiver extends JPushMessageReceiver {
 
     @Override
     public void onCommandResult(Context context, CmdMessage cmdMessage) {
-        LogUtils.e("[onCommandResult] " + cmdMessage);
+//        LogUtils.e("[onCommandResult] " + cmdMessage);
     }
 
     @Override
